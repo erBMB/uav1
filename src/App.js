@@ -7,7 +7,7 @@ import { Diplome } from './Pages/Diplome';
 import {IS}  from './Pages/InvitedSpeakers';
 import { Sections } from './Pages/Sectiuni';
 import Sponsorii from './Pages/Sponsori';
-import {PS} from './Pages/PaginaDeStart';
+//import {PS} from './Pages/PaginaDeStart';
 import {Home1} from './Pages/Home';
 
 export default function App() {
