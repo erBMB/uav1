@@ -1,82 +1,21 @@
-import React from 'react'
+import React from 'react';
 import styled from 'styled-components';
 
-const PSStyle=styled.div`
+const Home1Style=styled.div`
 
-padding-top: 200px;
+padding-top: 150px;
+display: flex;
+justify-content: center;
+align-items: center;
 
-.split {
-  height: 100%;
-  width: 30%;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  overflow-x: hidden;
-  padding-top: 20px;
-  border-right: black;
-    border-style: solid;
-    border-width: 2px;
-    margin-bottom: 15px;
-    border-left: none;
-    border-bottom: none;
-    border-top: none;
-    padding-top: 100px;
-}
-
-.left {
-  left: 0;
-  background-color: #111;
-}
-
-.right {
-  right: 0;
-  width: 70%;
-}
-
-.centered {
-  //position: absolute;
-  top: 50%;
-  left: 50%;
-  text-align: center;
-  width: 30%;
-}
-
-
-
-img{
-   margin-top:5em;
-    width: 200%;
-    height: 200%;
-}
-.center-image{
-    display:flex;
-    justify-content:'center';
-    width: 25%;
-    margin-left: auto;
-    margin-right: auto;
-    flex-direction: column;
-    ;
- }
-
-.containerL{
-    padding-top: 100px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 50%;
-    border-right: black;
-    border-style: solid;
-    border-width: 2px;
-    margin-bottom: 15px;
-    border-left: none;
-    border-bottom: none;
-    border-top: none;
+hr{
+    margin-top: 15px;
+    margin-bottom:15px;
 }
 
 a:link, a:visited {
   background-color: white;
-  color: black;
+  color: navy;
   padding: 14px 25px;
   text-align: center;
   text-decoration: none;
@@ -87,30 +26,92 @@ a:link, a:visited {
     justify-content: center;
     align-items: center;
     width: 300px;
+    margin-top: 20px;
+margin-bottom: 20px;
 }
 
-@media screen and (max-width: 1000px) {
-    .container { display: flex; flex-flow: column-reverse; }
-}
-
-a:hover, a:active {
+    a:hover, a:active {
   background-color: #F5F5F5;
 }
+
+code {
+  background: #2db34a;
+  border-radius: 6px;
+  color: #fff;
+  display: block;
+  font: 14px/24px "Source Code Pro", Inconsolata, "Lucida Console", Terminal, "Courier New", Courier;
+  padding: 24px 15px;
+  text-align: center;
+}
+header,
+section,
+aside,
+footer {
+  margin: 0 1.5% 24px 1.5%;
+}
+section {
+  float: left;
+  width: 20%;
+}
+aside {
+  float: right;
+  width: 45%;
+}
+
+.img1{
+    padding-top: 20px;
+    padding-left: 20px;
+    width: 300px;
+    height: 300px;
+}
+.img2{
+    padding-top: 50px;
+    padding-right: 10px;
+    padding-left: 200px;
+    width: 800px;
+    height: 500px;
+}
+.top-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+.dimText{
+    font-size:14px ;
+color:black;
+}
+
+@media only screen and (max-width: 1220px) {
+    padding: 10rem 0;
+    .top-section {
+      flex-direction: column;
+      gap: 5rem;
+      section{
+          width: 100%;
+          padding-left: 3em;
+          padding-right: 3em;
+      }
+      aside{
+        width: 100%;
+          
+          padding-left: 3em;
+          padding-right: 3em;
+      }
+      
+    }
+    }
 `;
 
 
-export function PS() {
-  return (
-    <>
-    
-    <PSStyle>
-      <div className="split letft ">
-        <div className="center-image">
-          <img
-            src="/resources/FI.png"
-            alt="Felicitari tuturor participantilor"
-          />
-        </div>
+
+export function Home1(){
+    return (
+      <Home1Style>
+         <div className="top-section">
+        <section >
+        <img src="/resources/FI.png" className="img1" alt="a" />;
         <p style={{ textAlign: "center", color: "black", fontSize: "20px" }}>
           4-5 iunie 2021
         </p>
@@ -118,7 +119,7 @@ export function PS() {
           href="https://www.facebook.com/SICSSArad/"
           target="_blank"
           rel="noreferrer"
-          style={{ fontSize: "16px", textAlign: "center" }}
+          style={{ fontSize: "16px", textAlign: "center", color:'navy' }}
         >
           Vizitați-ne pe Facebook
         </a>
@@ -129,15 +130,17 @@ export function PS() {
         </h2>
         <hr style={{ width: "70%", margin: " auto" }} />
         <a
-          href="https://www.facebook.com/SICSSArad/"
+          href="https://inginerie.uav.ro/"
           target="_blank"
           rel="noreferrer"
           style={{ fontSize: "16px", textAlign: "center" }}
         >
           Universitatea "Aurel Vlaicu" din Arad
         </a>
-        <h1>Centrul de infromatii</h1>
-        <p>
+        <h1 style={{fontSize:'18px',color:'black'}}>Centrul de infromatii</h1>
+        <div style={{fontSize:'14px'}}>
+            <p></p>
+        <p style={{marginTop:'10px'}}>
           <b>Valentina Emilia Balas </b>
         </p>
         <p> balas@drbalas.ro</p>
@@ -147,8 +150,9 @@ export function PS() {
         </p>
         <p>marius@drbalas.ro </p>
         <p> +40 0756 577 992 </p>
-      </div>
-      <div className="split right ">
+        </div>
+        </section>
+        <aside >
         <h1>Bun venit pe pagina noastră!</h1>
         <div className="centered">
           <img
@@ -158,14 +162,14 @@ export function PS() {
         </div>
 
         <a
-          href="https://www.facebook.com/SICSSArad/"
+          href="https://cdn.uav.ro/documente-inginerie/Manisfestari-Studentesti/Programul-Sesiunii-Stiintifice-Studentesti-2021.pdf"
           target="_blank"
           rel="noreferrer"
           style={{ fontSize: "16px", textAlign: "center" }}
         >
           Program desfasurare
         </a>
-        <div>
+        <div className='dimText'>
           <p>
             Sesiunea internationala de comunicari stiintifice studentesti a
             Facultatii de Inginerie din cadrul Universitatii "Aurel Vlaicu" din
@@ -197,8 +201,8 @@ export function PS() {
             studentului.
           </p>
         </div>
-      </div>
-    </PSStyle>
-    </>
-  );
+        </aside>
+        </div>
+      </Home1Style>
+    );
 }
